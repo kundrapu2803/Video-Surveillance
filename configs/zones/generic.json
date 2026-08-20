@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "name": "generic", "kind": "video", "width": 1920, "height": 1080,
+    "fps": 30.0, "camera_motion": "static"
+  },
+  "defaults": {
+    "normalized": true,
+    "reference_point": "bottom_center",
+    "min_confidence": 0.35,
+    "enter_seconds": 0.20,
+    "exit_seconds": 0.60,
+    "track_timeout_seconds": 3.0,
+    "dwell_grace_seconds": 1.5,
+    "loiter_seconds": 8.0,
+    "stationary_window_seconds": 4.0,
+    "stationary_radius": 0.5,
+    "stationary_scale_ratio_max": 1.25,
+    "cooldown_seconds": 30.0,
+    "merge_gap_seconds": 5.0,
+    "min_event_duration_s": 0.30,
+    "max_events_per_minute": 60,
+    "max_events_per_minute_per_zone": 30
+  },
+  "zones": [
+    {
+      "id": "z_generic_zone",
+      "name": "Monitored area",
+      "zone_class": "restricted",
+      "enabled": true,
+      "priority": 1,
+      "color": [0, 0, 255],
+      "polygon": [[0.10, 0.35], [0.90, 0.35], [0.95, 0.95], [0.05, 0.95]],
+      "rules": {
+        "intrusion": { "enabled": true },
+        "loitering": { "enabled": true }
+      }
+    }
+  ]
+}

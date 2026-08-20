@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cctv"
+version = "0.1.0"
+requires-python = ">=3.11,<3.12"
+description = "Person detection, tracking, and zone-based event detection over CCTV footage."
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+markers = [
+    "model: requires downloading YOLO weights",
+    "data: requires the MOT17/UCF-Crime datasets to be present",
+]
+addopts = "-m 'not model and not data'"

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "source": {
+    "name": "MOT17-04-FRCNN",
+    "kind": "imgseq",
+    "width": 1920, "height": 1080, "fps": 30.0,
+    "camera_motion": "static"
+  },
+  "defaults": {
+    "normalized": true,
+    "reference_point": "bottom_center",
+    "min_confidence": 0.35,
+    "enter_seconds": 0.20,
+    "exit_seconds": 0.60,
+    "track_timeout_seconds": 3.0,
+    "dwell_grace_seconds": 1.5,
+    "loiter_seconds": 8.0,
+    "stationary_window_seconds": 4.0,
+    "stationary_radius": 0.5,
+    "stationary_scale_ratio_max": 1.25,
+    "cooldown_seconds": 30.0,
+    "merge_gap_seconds": 5.0,
+    "min_event_duration_s": 0.30,
+    "max_events_per_minute": 60,
+    "max_events_per_minute_per_zone": 30
+  },
+  "zones": [
+    {
+      "id": "z_platform_edge",
+      "name": "Platform edge (restricted)",
+      "zone_class": "restricted",
+      "enabled": true,
+      "priority": 1,
+      "color": [0, 0, 255],
+      "polygon": [[0.02, 0.55], [0.45, 0.50], [0.50, 0.62], [0.05, 0.72]],
+      "rules": {
+        "intrusion": { "enabled": true, "min_confidence": 0.40, "enter_seconds": 0.15, "cooldown_seconds": 20.0 },
+        "loitering": { "enabled": false }
+      }
+    },
+    {
+      "id": "z_concourse",
+      "name": "Concourse (monitored)",
+      "zone_class": "monitored",
+      "enabled": true,
+      "priority": 2,
+      "color": [0, 180, 255],
+      "polygon": [[0.50, 0.45], [0.98, 0.42], [0.98, 0.90], [0.55, 0.85]],
+      "rules": {
+        "intrusion": { "enabled": false },
+        "loitering": { "enabled": true, "loiter_seconds": 6.0, "stationary_radius": 0.55 }
+      }
+    }
+  ]
+}

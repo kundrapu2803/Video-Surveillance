@@ -1,0 +1,15 @@
+# BoT-SORT with with_reid flipped on -- upstream ships it off. This is the
+# single highest-leverage flag for the Re-ID requirement (tracker-internal
+# appearance matching bridges gaps up to ~track_buffer frames).
+tracker_type: botsort
+track_high_thresh: 0.25
+track_low_thresh: 0.10
+new_track_thresh: 0.25
+track_buffer: 60
+match_thresh: 0.80
+fuse_score: true
+gmc_method: none
+proximity_thresh: 0.5
+appearance_thresh: 0.8
+with_reid: true
+model: auto

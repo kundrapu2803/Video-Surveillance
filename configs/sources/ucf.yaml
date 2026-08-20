@@ -1,0 +1,7 @@
+# Recommended settings for UCF-Crime clips: lower resolution and messier
+# footage than MOT17, so a smaller imgsz keeps runtime sane and a slightly
+# higher min_confidence compensates for compression artifacts. Pass with
+# --config configs/sources/ucf.yaml.
+imgsz: 640
+tracker: botsort_reid
+min_confidence: 0.40

@@ -1,0 +1,26 @@
+# torch and torchvision are installed separately (CPU wheels) by scripts/bootstrap_env.ps1
+# before this file is applied. torchaudio is deliberately NEVER installed — see
+# scripts/diagnose_torch.ps1 for why a mismatched torchaudio is the leading suspect for
+# the WinError 1114 failure in the pre-existing base conda env.
+
+ultralytics>=8.4,<8.5
+lap>=0.5.12,<0.6
+shapely>=2.0,<3
+opencv-python>=4.9,<4.11
+imageio-ffmpeg>=0.5,<1
+numpy>=1.26,<2
+pandas>=2.0,<3
+scipy>=1.11,<2
+pyarrow>=14
+pyyaml>=6
+tqdm>=4.66
+psutil>=5.9
+tzdata
+jsonschema>=4.17
+motmetrics==1.4.0
+streamlit>=1.40
+altair>=5
+kaggle>=2.2,<3
+requests>=2.31
+pytest>=8
+matplotlib>=3.8

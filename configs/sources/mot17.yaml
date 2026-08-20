@@ -1,0 +1,5 @@
+# Recommended settings for MOT17 sequences. Pass with --config configs/sources/mot17.yaml
+# (CLI flags still override anything here).
+imgsz: 960
+tracker: botsort_reid
+min_confidence: 0.35
