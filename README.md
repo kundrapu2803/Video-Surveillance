@@ -213,6 +213,8 @@ The project uses MOT17 ground-truth annotations for tracking evaluation where av
 #### Tracking Frame
 ![Results](docs/samples/tracking_frame.png)
 
+#### Dashboard
+![Dashboards](Dashboard.png)
 
 ## Difficult Cases
 
