@@ -202,6 +202,10 @@ The evaluation includes metrics such as: Precision, Recall, F1, AP50, MOTA, MOTP
 
 The project uses MOT17 ground-truth annotations for tracking evaluation where available.
 
+## Results
+
+![Results](docs/samples/annotated_frame.png)
+
 ## Difficult Cases
 
 1. **Occlusion:** The tracker can keep tracks when detections are temporarily missing.
