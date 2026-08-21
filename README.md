@@ -120,29 +120,29 @@ For MOT17 image sequences, pass the image directory as the video/source argument
 
 For example:
 
-'''python run.py ^
-  --video Dataset\mot17\MOT17-09-FRCNN\img1 ^
-  --zones configs\zones\mot17-09.json ^
-  --config configs\sources\mot17.yaml ^
+'''python run.py 
+  --video Dataset\mot17\MOT17-09-FRCNN\img1 
+  --zones configs\zones\mot17-09.json 
+  --config configs\sources\mot17.yaml 
   --output results\'''
 
 ### UCF-Crime
 
 For a video file:
 
-'''python run.py ^
-  --video Dataset\ucf-crime\Fighting003_x264.mp4 ^
-  --zones configs\zones\ucf_generic.json ^
-  --config configs\sources\ucf.yaml ^
+'''python run.py 
+  --video Dataset\ucf-crime\Fighting003_x264.mp4 
+  --zones configs\zones\ucf_generic.json 
+  --config configs\sources\ucf.yaml 
   --output results\'''
 
 You can also limit the number of frames for a quick test:
 
 '''python run.py ^
-  --video Dataset\mot17\MOT17-09-FRCNN\img1 ^
-  --zones configs\zones\mot17-09.json ^
-  --config configs\sources\mot17.yaml ^
-  --output results\ ^
+  --video Dataset\mot17\MOT17-09-FRCNN\img1 
+  --zones configs\zones\mot17-09.json 
+  --config configs\sources\mot17.yaml 
+  --output results\ 
   --max-frames 900'''
 
 ## Output
@@ -193,9 +193,9 @@ Run:
 
 For event evaluation:
 
-'''python scripts/evaluate.py ^
-  --run <run-id> ^
-  --with-events ^
+'''python scripts/evaluate.py 
+  --run <run-id> 
+  --with-events 
   --zones configs\zones\mot17-04.json'''
 
 The evaluation includes metrics such as: Precision, Recall, F1, AP50, MOTA, MOTP, IDF1,, ID switches, and Event precision/recall/F1
